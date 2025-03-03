@@ -22,7 +22,7 @@ public class NativeARViewerPlugin extends Plugin {
         Intent sceneViewerIntent = new Intent(Intent.ACTION_VIEW);
         Uri intentUri
                 = Uri.parse("https://arvr.google.com/scene-viewer/1.0").buildUpon()
-                        .appendQueryParameter("file", "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF/Avocado.gltf")
+                        .appendQueryParameter("file", intentUrl)
                         .appendQueryParameter("mode", "ar_only")
                         .build();
         sceneViewerIntent.setData(intentUri);
